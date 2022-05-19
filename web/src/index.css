@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+::-webkit-scrollbar { display: none!important; }
+
+@keyframes slide {
+  0% {bottom: -70%;}
+  100% {bottom: 0%;}
+}
+
+
+/* 
+body {
+  background-color: gray;
+} */
+
+
+.container {
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  right: 5vh;
+  user-select: none;
+}
+
+.phone-frame {
+  position: absolute;
+  width: 30vh;
+  height: 61vh;
+  bottom: 0;
+  right: 0;
+  margin: 5vh;
+  z-index: 150;
+  pointer-events: none;
+}
+
+.lr-0 {
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.phone-container {
+  height: 58.6vh;
+  width: 27vh;
+  bottom: 1vh;
+  border-radius: 2vh;
+  right: 1.7vh;
+  margin: 5vh;
+  overflow: hidden;
+  position: absolute;
+}
+
+.phone-background {
+  background-image: url('./resources/background-1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-wp {
+  background-image: url('./resources/wpback.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-news {
+  background-image: url('./resources/newsbg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.toggle-bg:after {
+  content: '';
+  @apply absolute top-0.5 left-0.5 bg-white border border-gray-300 rounded-full h-4 w-4 transition shadow-sm;
+}
+
+input:checked + .toggle-bg:after {
+  transform: translateX(100%);
+  @apply border-white;
+}
+
+input:checked + .toggle-bg {
+  @apply bg-blue-600 border-blue-600;
+}
+
+.settings-items {
+  @apply w-full bg-white flex  flex-row justify-between gap-1 p-1 pl-3 items-center dark:border-none 
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.max-2-row {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.max-3-row {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.custom-font {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.jobs-container > svg:first-child {
+  @apply text-6xl;
+}
+
+
